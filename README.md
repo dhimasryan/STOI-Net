@@ -20,4 +20,6 @@ Please kindly cite our paper, if you find this code is useful.
 <a id="1"></a> 
 R. E. Zezario, S.-W. Fu, C.-S. Fuh, Y. Tsao, and H.-M. Wang, “STOINet: A deep learning based non-intrusive speech intelligibility assessment model,” in Proc. APSIPA ASC, 2020
 
+**Note**
 
+<a href="https://github.com/CyberZHG/keras-self-attention" target="_blank">Self Attention</a> function is created by others
