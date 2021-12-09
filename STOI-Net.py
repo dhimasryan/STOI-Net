@@ -206,7 +206,7 @@ if __name__ == '__main__':
      
     parser = argparse.ArgumentParser('')
     parser.add_argument('--gpus', type=str, default='0')
-    parser.add_argument('--test', type=str)     
+    parser.add_argument('--mode', type=str, default='train') 
     args = parser.parse_args() 
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpus
     
@@ -225,9 +225,13 @@ if __name__ == '__main__':
 
     Test_list=  Get_filenames('Test_STOI.txt')
     Num_testdata=len(Test_list)
-   
-    train(Train_list, Test_list, pathmodel)
-    
-    print 'testing' 
-    Test(Test_list,pathmodel)
-    print 'complete testing stage'
+
+    if args.mode == 'train':
+       print 'training' 
+       train(Train_list, Test_list, pathmodel)
+       print 'complete training stage'
+       
+    if args.mode == 'test':           
+       print 'testing' 
+       Test(Test_list,pathmodel)
+       print 'complete testing stage'
