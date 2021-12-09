@@ -13,6 +13,17 @@ You can download our environmental setup at Environment Folder and use the follo
 conda env create -f environment.yml
 ```
 
+**How to run the code**
+
+Please use following script to train the model:
+```js
+python STOI-Net.py --gpus <assigned GPU> --mode train
+```
+For, the testing stage, plase use the following script:
+```js
+python STOI-Net.py --gpus <assigned GPU> --mode test
+```
+
 **Citation**
 
 Please kindly cite our paper, if you find this code is useful.
