@@ -127,7 +127,7 @@ def BLSTM_CNN_with_ATT():
     model = Model(outputs=[Average_score, Frame_score], inputs=_input)
     return model
     
-def train(Train_list, Test_list, pathmodel):
+def train(Train_list, Test_list, Num_train, Num_testdata, pathmodel):
     print 'model building...'
     
     model = BLSTM_CNN_with_ATT()
@@ -228,7 +228,7 @@ if __name__ == '__main__':
 
     if args.mode == 'train':
        print 'training' 
-       train(Train_list, Test_list, pathmodel)
+       train(Train_list, Test_list, Num_train, Num_testdata, pathmodel)
        print 'complete training stage'
        
     if args.mode == 'test':           
